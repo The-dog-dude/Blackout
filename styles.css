@@ -13,7 +13,7 @@ h1, p {
 }
 
 #content {
-    margin-left: 60px;
+    margin-left: 250px;  /* Adjusted for the fixed sidebar width */
     padding: 20px;
 }
 
@@ -25,12 +25,12 @@ section {
 #sidebar {
     position: fixed;
     top: 0;
-    left: -200px; /* Initially hidden */
-    width: 200px;
+    left: 0;  /* Always visible */
+    width: 250px;
     height: 100%;
     background-color: #222;
-    transition: left 0.3s ease;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    padding-top: 20px;
 }
 
 #sidebar ul {
@@ -56,11 +56,6 @@ section {
 #sidebar ul li a:hover {
     color: #ffcc00;
     background-color: #333;
-}
-
-/* Sidebar Hover Effect */
-#sidebar:hover {
-    left: 0;
 }
 
 /* Make the page full height */
