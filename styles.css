@@ -78,3 +78,33 @@ body a:hover {
 html, body {
     height: 100%;
 }
+
+/* Add to styles.css */
+.error-page {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.error-page h1 {
+    font-size: 48px;
+    color: orange;
+}
+
+.error-page p {
+    font-size: 24px;
+    color: white;
+}
+
+.error-page .home-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: orange;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.error-page .home-link:hover {
+    background-color: #ffcc00;
+}
