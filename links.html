@@ -56,47 +56,55 @@
 
             <!-- Text Above the Checkbox -->
             <div class="checkbox-container">
-                <p class="switch-text">Open In about:blank</p>
+                <p class="switch-text">Open Links in about:blank</p>
                 <label>
-                    <input type="checkbox" id="toggleIframe"> Enable iframe
+                    <input type="checkbox" id="toggleIframe"> Enable about:blank Links
                 </label>
             </div>
 
             <h3>Vortex</h3>
-            <a href="http://killthetapeworms.oops.wtf">Link 1</a><br>
-            <a href="http://dashboard.fluxus.org">Link 2</a><br>
-            <a href="http://products.happyrobotics.com">Link 3</a><br>
-            <a href="http://follow.chicken.man.on.vortexdb.com.ar">Link 4</a><br>
-            <a href="http://dps.farted.net">Link 5</a><br>
-            <a href="http://school.blockers.farted.net">Link 6</a><br>
-            <a href="http://any.privatedns.org">Link 7</a><br>
-            <a href="http://heeheehee.evicly.pobbler.thesqueakandoilmanual.com">Link 8</a><br>
-            <a href="http://cetsmdrjnc.generaloweb.com">Link 9</a><br>
-            <a href="http://powitbkotg.ocxpressit.com">Link 10</a><br>
-            <a href="http://xsfwwwlfcx.musdi.web.id">Link 11</a><br>
-            <a href="http://gjprrpqpuk.meatbytes.com">Link 12</a><br>
-            <a href="http://dashboard-no.2.fluxus.org">Link 13</a><br>
+            <a href="http://killthetapeworms.oops.wtf" class="link">Link 1</a><br>
+            <a href="http://dashboard.fluxus.org" class="link">Link 2</a><br>
+            <a href="http://products.happyrobotics.com" class="link">Link 3</a><br>
+            <a href="http://follow.chicken.man.on.vortexdb.com.ar" class="link">Link 4</a><br>
+            <a href="http://dps.farted.net" class="link">Link 5</a><br>
+            <a href="http://school.blockers.farted.net" class="link">Link 6</a><br>
+            <a href="http://any.privatedns.org" class="link">Link 7</a><br>
+            <a href="http://heeheehee.evicly.pobbler.thesqueakandoilmanual.com" class="link">Link 8</a><br>
+            <a href="http://cetsmdrjnc.generaloweb.com" class="link">Link 9</a><br>
+            <a href="http://powitbkotg.ocxpressit.com" class="link">Link 10</a><br>
+            <a href="http://xsfwwwlfcx.musdi.web.id" class="link">Link 11</a><br>
+            <a href="http://gjprrpqpuk.meatbytes.com" class="link">Link 12</a><br>
+            <a href="http://dashboard-no.2.fluxus.org" class="link">Link 13</a><br>
+
             <h3>Pizza Edition</h3>
-            <a href="https://data.abatek.com">Link 1</a><br>
-            <a href="https://urfunny.bot.nu">Link 2</a><br>
-            <a href="https://pizzaedition.realmzer.xyz">Link 3</a><br>
+            <a href="https://data.abatek.com" class="link">Link 1</a><br>
+            <a href="https://urfunny.bot.nu" class="link">Link 2</a><br>
+            <a href="https://pizzaedition.realmzer.xyz" class="link">Link 3</a><br>
         </section>
     </div>
 
     <script>
-        // Listen for changes on the checkbox
-        document.getElementById('toggleIframe').addEventListener('change', function() {
-            if (this.checked) {
-                openPageInIframe();
-            }
+        // Listen for the checkbox toggle
+        const toggleCheckbox = document.getElementById('toggleIframe');
+
+        // Add an event listener for the links
+        const links = document.querySelectorAll('.link');
+
+        links.forEach(link => {
+            link.addEventListener('click', function(event) {
+                if (toggleCheckbox.checked) {
+                    event.preventDefault(); // Prevent default link behavior
+                    openInAboutBlank(this.href); // Open link in about:blank
+                }
+            });
         });
 
-        function openPageInIframe() {
-            // Open the entire page in a new tab as an iframe
-            const currentPageURL = window.location.href; // Current page URL
-            let newTab = window.open('about:blank', '_blank'); // Open blank page
+        // Open the link in about:blank
+        function openInAboutBlank(url) {
+            let newTab = window.open('about:blank', '_blank');
             newTab.document.body.innerHTML = `
-                <iframe src="${currentPageURL}" width="100%" height="100%" style="border: none; margin: 0; padding: 0; overflow: hidden;"></iframe>
+                <iframe src="${url}" width="100%" height="100%" style="border: none; margin: 0; padding: 0; overflow: hidden;"></iframe>
             `;
         }
     </script>
