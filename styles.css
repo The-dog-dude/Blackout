@@ -63,6 +63,7 @@ body a {
     color: #e67e00; /* Slightly darker orange */
     text-decoration: none;
     text-shadow: 0 0 10px orange, 0 0 20px orange;
+    text-align: center;
 }
 
 body a:hover {
