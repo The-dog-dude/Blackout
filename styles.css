@@ -7,8 +7,6 @@ body {
     padding: 0;
 }
 
-
-
 h1, p {
     text-align: center;
     text-shadow: 0 0 10px orange, 0 0 20px orange;
@@ -60,14 +58,18 @@ section {
     background-color: #333;
 }
 
+/* Links in the body of the page (not the sidebar) */
+body a {
+    color: #e67e00; /* Slightly darker orange */
+    text-decoration: none;
+    text-shadow: 0 0 10px orange, 0 0 20px orange;
+}
+
+body a:hover {
+    color: #cc6a00; /* Even darker orange for hover */
+}
+
 /* Make the page full height */
 html, body {
     height: 100%;
-}
-
-
-.link {
-    text-align: center;
-    text-shadow: 0 0 10px orange, 0 0 20px orange;
-    text-decoration: none;
 }
