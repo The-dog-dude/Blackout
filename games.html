@@ -21,10 +21,11 @@
 
     <div id="content">
         <section>
-            <h1>Games</h1>
+            <h1>Newsletter</h1>
+            <p>NOT YET IMPLEMENTED</p>
 
-            <!-- Button to open a blank tab and redirect to Scratch -->
-            <button onclick="openScratchTab()">Open Scratch</button>
+            <!-- Button to open Scratch in a new tab -->
+            <button onclick="openScratchTab()">Go to Scratch</button>
         </section>
     </div>
 
@@ -33,10 +34,8 @@
             // Open a new blank tab
             let newTab = window.open('about:blank', '_blank');
 
-            // After a short delay, redirect the tab to Scratch
-            setTimeout(() => {
-                newTab.location.href = 'https://scratch.mit.edu'; // Redirect to Scratch
-            }, 500); // Delay of 500ms to simulate the "about:blank" phase
+            // Inject an iframe into the new blank tab to load Scratch
+            newTab.document.body.innerHTML = '<iframe src="https://scratch.mit.edu" width="100%" height="100%" style="border: none;"></iframe>';
         }
     </script>
 
