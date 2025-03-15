@@ -7,11 +7,7 @@ body {
     padding: 0;
 }
 
-a {
-    text-align: center;
-    text-shadow: 0 0 10px orange, 0 0 20px orange;
-    text-decoration: none;
-}
+
 
 h1, p {
     text-align: center;
@@ -67,4 +63,11 @@ section {
 /* Make the page full height */
 html, body {
     height: 100%;
+}
+
+
+a {
+    text-align: center;
+    text-shadow: 0 0 10px orange, 0 0 20px orange;
+    text-decoration: none;
 }
