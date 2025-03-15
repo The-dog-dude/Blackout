@@ -7,5 +7,5 @@ window.addEventListener('load', () => {
 
         // Show the main content
         document.getElementById('content').style.display = 'block';
-    }, 3000);  // 3000 milliseconds = 3 seconds
+    }, 30000);  // 3000 milliseconds = 3 seconds
 });
