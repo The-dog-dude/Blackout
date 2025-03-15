@@ -34,6 +34,7 @@ section {
     background-color: #222;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
     padding-top: 20px;
+    overflow: auto;
 }
 
 #sidebar ul {
