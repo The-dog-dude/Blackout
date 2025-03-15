@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        #chatbox { width: 50%; margin: auto; border: 1px solid #ccc; padding: 10px; height: 300px; overflow-y: scroll; }
+        #userInput { width: 80%; padding: 5px; }
+        button { padding: 5px 10px; margin: 5px; }
+    </style>
+</head>
+<body>
+
+    <h2>AI Chatbot</h2>
+    <div id="chatbox"></div>
+    <input type="text" id="userInput" placeholder="Type a message..." />
+    <button onclick="sendMessage()">Send</button>
+
+    <script>
+        async function sendMessage() {
+            let userText = document.getElementById("userInput").value;
+            document.getElementById("chatbox").innerHTML += `<p><strong>You:</strong> ${userText}</p>`;
+            document.getElementById("userInput").value = "";
+
+            let response = await fetch("https://api.openai.com/v1/chat/completions", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": "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"
+                },
+                body: JSON.stringify({
+                    model: "gpt-3.5-turbo",
+                    messages: [{ role: "user", content: userText }]
+                })
+            });
+
+            let data = await response.json();
+            let botReply = data.choices[0].message.content;
+            document.getElementById("chatbox").innerHTML += `<p><strong>Bot:</strong> ${botReply}</p>`;
+        }
+    </script>
+
+</body>
+</html>
