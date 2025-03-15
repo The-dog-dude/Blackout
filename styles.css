@@ -15,11 +15,11 @@ h1, p, h4 {
 #content {
     margin-left: 250px;  /* Adjusted for the fixed sidebar width */
     padding: 20px;
+    text-align: center;  /* Ensures the text is centered within #content */
 }
 
 section {
     margin: 50px 0;
-    text-align: center; /* Ensure content is centered */
 }
 
 /* Sidebar Styles */
@@ -64,8 +64,10 @@ body a {
     color: #e67e00; /* Slightly darker orange */
     text-decoration: none;
     text-shadow: 0 0 10px orange, 0 0 20px orange;
-    display: inline-block;  /* Ensure links are treated as inline-block */
-    margin: 10px 0;  /* Add spacing between the links */
+    display: inline-block;  /* Make links behave like block-level elements */
+    text-align: center;  /* Center the text inside the link */
+    margin: 10px auto;  /* Center the links by adding auto margins */
+    padding: 5px 0;  /* Optional: spacing within each link */
 }
 
 body a:hover {
