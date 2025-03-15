@@ -1,3 +1,78 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full-screen overlay for the loading screen */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Makes sure it stays on top */
+}
+
+/* Eclipse container */
+#eclipse {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+/* Sun's glow effect */
+#sun {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 165, 0, 1) 100%);
+    box-shadow: 0 0 30px 15px rgba(255, 165, 0, 0.7); /* Glowing effect */
+}
+
+/* Moon's dark effect */
+#moon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: black;
+    animation: eclipse-animation 5s infinite ease-in-out; /* Eclipse animation */
+}
+
+/* Eclipse animation: moon moving across the sun */
+@keyframes eclipse-animation {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 50%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+/* Main content hidden during the loading screen */
+#content {
+    display: none; /* Hide content until page is loaded */
+}
+
+/* Sidebar and content styles (already existing) */
+
 /* General Page Styles */
 body {
     font-family: Arial, sans-serif;
