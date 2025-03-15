@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updates Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
+    <div id="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="updates.html">Updates</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="suggestions.html">Suggestions</a></li>
+            <li><a href="newsletter.html">Newsletter</a></li>
+            <li><a href="links.html">Links</a></li>
+        </ul>
+    </div>
+
+    <div id="content">
+        <section>
+            <h1>Newsletter</h1>
+            <p>NOT YET IMPLEMENTED</p>
+
+            <!-- Button to open a blank tab and redirect to Scratch -->
+            <button onclick="openScratchTab()">Open Scratch</button>
+        </section>
+    </div>
+
+    <script>
+        function openScratchTab() {
+            // Open a new blank tab
+            let newTab = window.open('about:blank', '_blank');
+
+            // After a short delay, redirect the tab to Scratch
+            setTimeout(() => {
+                newTab.location.href = 'https://scratch.mit.edu'; // Redirect to Scratch
+            }, 500); // Delay of 500ms to simulate the "about:blank" phase
+        }
+    </script>
+
+</body>
+</html>
