@@ -112,13 +112,12 @@ html, body {
     background-color: #ffcc00;
 }
 
-/* Reduce space between image and heading only when 'logo-margin' class is present */
-.logo-margin img {
-    display: block;
-    margin: 0 auto;
-    padding-bottom: 5px; /* Adjust spacing */
+/* Make the logo fixed in the top-right corner */
+.logo-fixed {
+    position: fixed;
+    top: 10px;  /* Adjust distance from the top */
+    right: 10px; /* Adjust distance from the right */
+    width: 100px; /* Adjust size if needed */
+    z-index: 1000; /* Ensures it stays above other elements */
 }
 
-.logo-margin h1 {
-    margin-top: 0;
-}
