@@ -33,6 +33,19 @@
             
             <p>Feel free to explore. The chat feature has not yet been implemented, so go here to chat:</p>
             <a href="https://docs.google.com/document/d/1CE9NFP0mq8NufBMOsrh_jLF28dCgkmwmDZ4JvGkHqrA/edit?tab=t.0" class="link">Chat</a>
+            <button id="admin-btn">Admin Panel</button>
+
+<script>
+    document.getElementById("admin-btn").addEventListener("click", function() {
+        let code = prompt("Enter code:");
+        if (code === "thanos") {
+            window.location.href = "squidgames.html";
+        } else if (code !== null) {
+            alert("Incorrect code!");
+        }
+    });
+</script>
+
         </section>
     </div>
 
