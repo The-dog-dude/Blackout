@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLACKOUT</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('BLACKOUT.png') no-repeat center center/cover;
+            text-align: center;
+        }
+
+        .button {
+            position: absolute;
+            bottom: 30%;
+            padding: 15px 30px;
+            font-size: 20px;
+            color: white;
+            background-color: black;
+            border: 2px solid white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background-color: darkred;
+            border-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <button class="button" onclick="window.location.href='home.html'">Enter</button>
+</body>
+</html>
