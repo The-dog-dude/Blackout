@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ably Chat</title>
+    <script src="https://cdn.ably.io/lib/ably.min-1.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        #chatbox {
+            width: 80%;
+            height: 300px;
+            border: 1px solid black;
+            overflow-y: auto;
+            margin: 10px auto;
+            padding: 10px;
+            background: #f9f9f9;
+        }
+        #message {
+            width: 70%;
+            padding: 10px;
+        }
+        #send {
+            padding: 10px;
+            background: black;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ably Chat</h1>
+    <div id="chatbox"></div>
+    <input type="text" id="message" placeholder="Type your message...">
+    <button id="send">Send</button>
+
+    <script>
+        // Replace with your Ably API key
+        const ably = new Ably.Realtime("YOUR-ABLY-API-KEY");
+        const channel = ably.channels.get("chat-room");
+
+        const chatbox = document.getElementById("chatbox");
+        const messageInput = document.getElementById("message");
+        const sendButton = document.getElementById("send");
+
+        // Send message on button click
+        sendButton.addEventListener("click", () => {
+            const message = messageInput.value.trim();
+            if (message) {
+                channel.publish("message", { text: message });
+                messageInput.value = "";
+            }
+        });
+
+        // Listen for incoming messages
+        channel.subscribe("message", (msg) => {
+            const p = document.createElement("p");
+            p.textContent = msg.data.text;
+            chatbox.appendChild(p);
+            chatbox.scrollTop = chatbox.scrollHeight; // Auto-scroll
+        });
+    </script>
+
+</body>
+</html>
