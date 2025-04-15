@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Page Title</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
+<head>
+  <title>Ably Chat</title>
+  <script src="https://cdn.ably.io/lib/ably.min-1.js"></script>
+</head>
 <body>
-  
+  <h1>Simple Ably Chat</h1>
+  <div id="chat"></div>
+  <input id="message" placeholder="Type a message..." />
+  <button onclick="sendMessage()">Send</button>
+
+  <script>
+    const ably = new Ably.Realtime('REPLACE_WITH_YOUR_API_KEY');
+    const channel = ably.channels.get('chat');
+
+    channel.subscribe('message', function(msg) {
+      const chat = document.getElementById('chat');
+      chat.innerHTML += `<p><strong>Someone:</strong> ${msg.data}</p>`;
+    });
+
+    function sendMessage() {
+      const input = document.getElementById('message');
+      const message = input.value;
+      channel.publish('message', message);
+      input.value = '';
+    }
+  </script>
 </body>
 </html>
+
