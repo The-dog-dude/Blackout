@@ -11,7 +11,7 @@
   <button onclick="sendMessage()">Send</button>
 
   <script>
-    const ably = new Ably.Realtime('REPLACE_WITH_YOUR_API_KEY');
+    const ably = new Ably.Realtime('iBX7Aw.-4oZBg:hW4eg6cFcOToKuBl32o8e61B5FMgjUoM9HoIXCqw3jg');
     const channel = ably.channels.get('chat');
 
     channel.subscribe('message', function(msg) {
