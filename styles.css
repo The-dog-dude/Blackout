@@ -1,6 +1,3 @@
-
-
-/* General Page Styles */
 body {
     font-family: Arial, sans-serif;
     background-color: black;
@@ -8,27 +5,22 @@ body {
     margin: 0;
     padding: 0;
 }
-
 h1, p, h4 {
     text-align: center;
     text-shadow: 0 0 10px orange, 0 0 20px orange;
 }
-
 #content {
-    margin-left: 250px;  /* Adjusted for the fixed sidebar width */
+    margin-left: 250px;  
     padding: 20px;
-    text-align: center;  /* Ensures the text is centered within #content */
+    text-align: center;  
 }
-
 section {
     margin: 50px 0;
 }
-
-/* Sidebar Styles */
 #sidebar {
     position: fixed;
     top: 0;
-    left: 0;  /* Always visible */
+    left: 0;  
     width: 250px;
     height: 100%;
     background-color: #222;
@@ -36,18 +28,15 @@ section {
     padding-top: 20px;
     overflow: auto;
 }
-
 #sidebar ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
-
 #sidebar ul li {
     padding: 20px;
     text-align: left;
 }
-
 #sidebar ul li a {
     color: orange;
     text-decoration: none;
@@ -56,48 +45,37 @@ section {
     display: block;
     padding: 5px 0;
 }
-
 #sidebar ul li a:hover {
     color: #ffcc00;
     background-color: #333;
 }
-
-/* Links in the body of the page (not the sidebar) */
 body a {
-    color: #e67e00; /* Slightly darker orange */
+    color: #e67e00; 
     text-decoration: none;
     text-shadow: 0 0 10px orange, 0 0 20px orange;
-    display: inline-block;  /* Make links behave like block-level elements */
-    text-align: center;  /* Center the text inside the link */
-    margin: 10px auto;  /* Center the links by adding auto margins */
-    padding: 5px 0;  /* Optional: spacing within each link */
+    display: inline-block;  
+    text-align: center;  
+    margin: 10px auto;  
+    padding: 5px 0;  
 }
-
 body a:hover {
-    color: #cc6a00; /* Even darker orange for hover */
+    color: #cc6a00; 
 }
-
-/* Make the page full height */
 html, body {
     height: 100%;
 }
-
-/* Add to styles.css */
 .error-page {
     text-align: center;
     margin-top: 100px;
 }
-
 .error-page h1 {
     font-size: 48px;
     color: orange;
 }
-
 .error-page p {
     font-size: 24px;
     color: white;
 }
-
 .home-link {
     display: inline-block;
     margin-top: 20px;
@@ -107,17 +85,27 @@ html, body {
     text-decoration: none;
     border-radius: 5px;
 }
-
 .error-page .home-link:hover {
     background-color: #ffcc00;
 }
-
-/* Make the logo fixed in the top-right corner */
 .logo-fixed {
     position: fixed;
-    top: 10px;  /* Adjust distance from the top */
-    right: 10px; /* Adjust distance from the right */
-    width: 100px; /* Adjust size if needed */
-    z-index: 1000; /* Ensures it stays above other elements */
+    top: 10px;  
+    right: 10px; 
+    width: 100px; 
+    z-index: 1000;
 }
-
+#message {
+    position: fixed;
+    bottom: 10px;
+    width: 100px;
+    height: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#send-message {
+    position: fixed;
+    bottom: 10px;
+    left: 70%;
+    transform: translateX(-50%);
+}

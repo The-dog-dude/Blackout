@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ably Chat</title>
+  <title>Blackout | Main Chat</title>
   <script src="https://cdn.ably.io/lib/ably.min-1.js"></script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Simple Ably Chat</h1>
+  <h1>Main Chat</h1>
   <div id="chat"></div>
   <input id="message" placeholder="Type a message..." />
-  <button onclick="sendMessage()">Send</button>
+  <button id="send-message" onclick="sendMessage()">Send</button>
 
   <script>
     const ably = new Ably.Realtime('iBX7Aw.-4oZBg:hW4eg6cFcOToKuBl32o8e61B5FMgjUoM9HoIXCqw3jg');

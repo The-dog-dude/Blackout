@@ -6,7 +6,7 @@
     <title>Updates Page</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Checkbox Styles */
+
         .checkbox-container {
             margin-bottom: 20px;
             font-size: 18px;
@@ -17,23 +17,23 @@
             margin-right: 10px;
         }
 
-        /* Label for the checkbox */
+
         label {
             font-size: 18px;
             color: white;
             font-weight: bold;
         }
 
-        /* For the text above the checkbox */
+
         .switch-text {
             font-size: 18px;
             margin-bottom: 10px;
             color: white;
         }
 
-        /* Optional: Styling for the checkbox when checked or unchecked */
+        
         .checkbox-container input:checked {
-            background-color: #ff7f00; /* Orange when on */
+            background-color: #ff7f00;
         }
     </style>
 </head>
@@ -56,7 +56,7 @@
         <section>
             <h1>Updates</h1>
 
-            <!-- Text Above the Checkbox -->
+             Text Above the Checkbox -->
             <div class="checkbox-container">
                 <p class="switch-text">Open Links in about:blank</p>
                 <label>
@@ -88,22 +88,22 @@
     </div>
 
     <script>
-        // Listen for the checkbox toggle
+
         const toggleCheckbox = document.getElementById('toggleIframe');
 
-        // Add an event listener for the links
+ 
         const links = document.querySelectorAll('.link');
 
         links.forEach(link => {
             link.addEventListener('click', function(event) {
                 if (toggleCheckbox.checked) {
-                    event.preventDefault(); // Prevent default link behavior
-                    openInAboutBlank(this.href); // Open link in about:blank
+                    event.preventDefault();
+                    openInAboutBlank(this.href);
                 }
             });
         });
 
-        // Open the link in about:blank
+
         function openInAboutBlank(url) {
             let newTab = window.open('about:blank', '_blank');
             newTab.document.body.innerHTML = `
