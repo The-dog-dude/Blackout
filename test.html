@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
   <title>Blackout Sign In</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <input type="password" id="password1" placeholder="Password" /><br>
-  <input type="username" id="password2" placeholder="Username" /><br>
+  <input type="password" id="password" placeholder="Password" /><br>
+  <input type="username" id="username" placeholder="Username" /><br>
   <button onclick="checkPasswords()">Submit</button>
   <p id="result"></p>
 
   <script>
     const userCombos = {
-      "hunter2|redstone42": "Alice",
-      "swordfish|bedrock99": "Bob"
+      "example|test": "Jeff",
+      "example2|test2": "Bob"
     };
 
     function checkPasswords() {
-      const p1 = document.getElementById("password1").value;
-      const p2 = document.getElementById("password2").value;
+      const p1 = document.getElementById("password").value;
+      const p2 = document.getElementById("username").value;
       const comboKey = `${p1}|${p2}`;
 
       const username = userCombos[comboKey];
