@@ -3,5 +3,5 @@ CREATE TABLE users (
     password TEXT
 );
 
-INSERT INTO users (username, password) VALUES ('Alice', 'hunter2');
+INSERT INTO users (username, password) VALUES ('Jeff', 'tunaguy');
 INSERT INTO users (username, password) VALUES ('Bob', 'swordfish');
