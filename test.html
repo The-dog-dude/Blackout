@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blackout Login</title>
+</head>
+<body>
+  <input type="password" id="password" placeholder="Enter password" />
+  <button onclick="checkPassword()">Submit</button>
+  <p id="result"></p>
+
+  <script>
+    // password: username pairs
+    const users = {
+      "hunter2": "Alice",
+      "swordfish": "Bob",
+      "redstone42": "Steve"
+    };
+
+    function checkPassword() {
+      const input = document.getElementById("password").value;
+      const username = users[input];
+
+      const result = document.getElementById("result");
+      if (username) {
+        result.textContent = `Welcome, ${username}!`;
+      } else {
+        result.textContent = "Invalid password.";
+      }
+    }
+  </script>
+</body>
+</html>
