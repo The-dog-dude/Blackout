@@ -4,114 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blackout | Resources</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-
-    <!-- CSS Styles Embedded in the HTML File -->
-    <style>
-        /* Global Styles */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: black;
-            color: orange;
-            margin: 0;
-            padding: 0;
-        }
-
-        h1, p, h4 {
-            text-align: center;
-            text-shadow: 0 0 10px orange, 0 0 20px orange;
-        }
-
-        /* Sidebar Styles */
-        #sidebar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 250px;
-            height: 100%;
-            background-color: #222;
-            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
-            padding-top: 20px;
-            overflow: auto;
-            display: flex;
-            justify-content: center; /* Horizontally center the container */
-            align-items: center; /* Vertically center the container */
-        }
-
-        #sidebar ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            text-align: center; /* Center the text in the list items */
-        }
-
-        #sidebar ul li {
-            padding: 20px;
-        }
-
-        #sidebar ul li a {
-            color: orange;
-            text-decoration: none;
-            font-size: 18px;
-            text-shadow: 0 0 10px orange, 0 0 20px orange;
-            display: block;
-            padding: 5px 0;
-        }
-
-        #sidebar ul li a:hover {
-            color: #ffcc00;
-            background-color: #333;
-        }
-
-        /* Content Section Styles */
-        #content {
-            margin-left: 250px;  /* Keeps content to the right of the sidebar */
-            padding: 20px;
-            text-align: center;
-        }
-
-        #content a {
-            color: #e67e00;
-            text-decoration: none;
-            text-shadow: 0 0 10px orange, 0 0 20px orange;
-            display: inline-block;
-            text-align: center;
-            margin: 10px auto;
-            padding: 5px 0;
-        }
-
-        #content a:hover {
-            color: #cc6a00;
-        }
-
-        /* Additional Styling */
-        html, body {
-            height: 100%;
-        }
-    </style>
 </head>
 <body>
-
-    <!-- Sidebar Section -->
+<h1>Resources</h1>
+    <h2>Use the Sidebar to navigate between Resources</h2>
+    <h3> To get back to Home, click here: <a> href="home.html">Back to Home</a></h3>
     <div id="sidebar">
         <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="resources.html">Resources</a></li>
-            <li><a href="information.html">Information</a></li>
-            <li><a href="links.html">Links</a></li>
-            <li><a href="ai.html">AI</a></li>
-            <li><a href="help.html">Help</a></li>
+            <li><a href="Resources/updates.html">Updates</a></li>
+            <li><a href="Resources/schedule.html">Schedule</a></li>
+            <li><a href="Resources/suggestions.html">Suggestions</a></li>
+            <li><a href="Resources/reports.html">Reports</a></li>
+            <li><a href="Resources/rankapplications.html">Rank Applications</a></li>
         </ul>
     </div>
-
-    <!-- Main Content Section -->
-    <div id="content">
-        <a href="Resources/updates.html">Updates</a><br>
-        <a href="Resources/schedule.html">Schedule</a><br>
-        <a href="Resources/suggestions.html">Suggestions</a><br>
-        <a href="Resources/reports.html">Reports</a><br>
-        <a href="Resources/rankapplications.html">Rank Applications</a><br>
-    </div>
-
 </body>
 </html>
