@@ -113,21 +113,21 @@ html, body {
 }
 
 #password-input {
-    position: absolute;
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
     color: orange;
 }
 
 #username-input {
-    position: absolute;
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
     color: orange;
 }
 
-#username-input {
-    position: absolute;
+#sign-in-button {
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
     color: rgb(0, 0, 0);
