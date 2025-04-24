@@ -6,10 +6,13 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  
+  <div id="sign-in">
   <input type="password" id="password-input" placeholder="Password" /><br>
   <input type="username" id="username-input" placeholder="Username" /><br>
-  <button onclick="checkPasswords()">Submit</button>
+  <button onclick="checkPasswords()" id="sign-in-button">Sign In</button>
   <p id="result"></p>
+  </div>
 
   <script>
     const userCombos = {
