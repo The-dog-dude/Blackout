@@ -47,14 +47,14 @@
 
             
 <script>
-document.getElementById("admin-btn").addEventListener("click", function() {
+    document.getElementById("admin-btn").addEventListener("click", function() {
         let code = prompt("Enter code:");
-    if (code === "Will") {
-      window.location.href = "birthday.html";
-    } else if { 
-      alert("Nice Try Loser");
-    }
-  }
+        if (code === "will") {
+            window.location.href = "birthday.html";
+        } else if (code !== null) {
+            alert("Incorrect code!");
+        }
+    });
 </script>
             
         </section>
