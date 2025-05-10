@@ -47,11 +47,11 @@
 
             
 <script>
-  function checkName() {
-    const input = document.getElementById('nameInput').value.trim();
-    if (input === "Will") {
+document.getElementById("admin-btn").addEventListener("click", function() {
+        let code = prompt("Enter code:");
+    if (code === "Will") {
       window.location.href = "birthday.html";
-    } else {
+    } else if { 
       alert("Nice Try Loser");
     }
   }
